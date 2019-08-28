@@ -1,0 +1,321 @@
+.intro {
+    @extend %container;
+    padding: 250px 20px 110px 20px;
+
+    &__title {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        color: $secondary;
+        font-size: 90px;
+        font-weight: $font-weight-bold;
+        line-height: 100px;
+        text-transform: uppercase;
+        letter-spacing: 4.96px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 400px;
+            height: 6px;
+            position: absolute;
+            top: 42%;
+            left: 20%;
+            transform: rotate(-51deg);
+            z-index: 5;
+            background-color: $decorative;
+        }
+    }
+
+    &__top-span {
+        position: relative;
+        z-index: 10;
+        align-self: flex-start;
+    }
+
+    &__bottom-span {
+        position: relative;
+        z-index: 1;
+        align-self: flex-end;
+    }
+
+    &__buttons {
+        width: 50%;
+        margin: 180px auto 0 auto;
+    }
+}
+
+.nav {
+    margin: 0;
+
+    &__menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__item {
+        
+        &:not(:last-child) {
+            margin: 0 40px 0 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 2px 6px;
+        color: $additional;
+        font-size: 14px;
+        font-weight: $font-weight-light;
+        line-height: 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        text-decoration: none;
+        border: 1px solid transparent;
+
+        &:hover {
+            color: $secondary; 
+            background-color: rgba($secondary, 0.1);
+            transition: 0.2s;
+            border-color: $secondary;
+        }
+
+        &:active {
+            color: $decorative-additional;
+            border-color: $decorative-additional;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.button {
+    display: flex;
+    padding: 17px 35px 17px 35px;
+    width: 311px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    background-color: $decorative;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    box-shadow: 0 16px 24px $sub-primary;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 36px;
+        height: 39px;
+        margin: 0 26px 0 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &:first-child::before {
+        background-image: url('../img/header/intro/app-store.png');
+    }
+
+    &:last-child::before {
+        background-image: url('../img/header/intro/google_play.png');
+    }
+
+    &__text {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &__top-text {
+        color: $secondary;
+        font-size: 14px;
+        font-weight: $font-weight-light;
+        line-height: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+    }
+
+    &__bottom-text {
+        color: $secondary;
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        line-height: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+    }
+
+    &:hover {
+        color: $secondary; 
+        background-color: rgba($decorative, 0.3);
+        transition: 0.2s;
+        border-color: $secondary;
+    }
+
+    &:active {
+        border-color: $decorative-additional;
+        
+        .button__top-text {
+            color: $decorative-additional;
+        }
+
+        .button__bottom-text {
+            color: $decorative-additional;
+        }
+    }
+}
+
+@media (max-width: 1569px) {
+    .intro {
+        padding: 196px 88px 100px 88px;
+
+        &__title {
+            font-size: 76px;
+            line-height: 92px;
+            letter-spacing: 3px;
+
+            &::after {
+                top: 53%;
+                left: 27%;
+            }
+        }
+
+        &__buttons {
+            width: 65%;
+            margin-top: 130px;
+        }
+    }
+}
+
+@media (max-width: 1365px) {
+    .intro {
+        padding: 136px 20px 91px 20px;
+
+        &__title {
+            padding: 0 8%;
+            font-size: 64px;
+            line-height: 74px;
+            letter-spacing: 3.52px;
+
+            &::after {
+                z-index: 1;
+                top: 50%;
+                left: 19%;
+            }
+        }
+
+        &__bottom-span {
+            margin-left: 18%;
+            z-index: 10;
+        }
+        
+        &__buttons {
+            width: 100%;
+            margin-top: 114px;
+        }
+    }
+    
+    .nav {
+        margin: 177px 0 0 0;
+
+        &__menu {
+            justify-content: space-around;
+        }
+
+        &__item {
+
+            &:not(:last-child) {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        padding: 102px 11px 18px 11px;
+
+        &__title {
+            padding: 0;
+            font-size: 31px;
+            line-height: 40px;
+            letter-spacing: 1.6px;
+
+            &::after {
+                max-width: 230px;
+                left: 9%;
+            }
+        }
+
+        &__top-span {
+            margin-left: 2%;
+        }
+
+        &__bottom-span {
+            margin-top: 10px;
+            z-index: 10;
+        }
+        
+        &__buttons {
+            margin: 114px 0 0 0;
+        }
+    }
+    
+    .nav {
+        order: 1;
+        margin-top: 43px;
+
+        &__menu {
+            justify-content: space-evenly;
+        }
+
+        &__item {
+            margin: 0;
+        }
+
+        &__link { 
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &__buttons {
+            width: 65%;
+            margin-top: 114px;
+        }
+    }
+
+    .button {
+        padding: 8px 12px;
+        width: 142px;
+
+        &::before {
+            width: 16px;
+            height: 18px;
+            margin: 0 10px 0 0;
+        }
+
+        &__top-text {
+            font-size: 8px;
+            line-height: 10px;
+        }
+    
+        &__bottom-text {
+            font-size: 8px;
+            line-height: 10px;
+        }
+    }
+}

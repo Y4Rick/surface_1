@@ -1,0 +1,26 @@
+@import 'fonts';
+@import 'colors';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 319px;
+    font-family: $font-state;
+    color: $primary;
+    font-weight: $font-weight-regular;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+%container {
+    max-width: 1570px;
+    margin: 0 auto;
+}
+
+@import 'header';
+@import 'services';
+@import 'fotorama-options';
+@import 'benefits';
+@import 'footer';
