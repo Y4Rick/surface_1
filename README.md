@@ -1,7 +1,6 @@
 # Surface_1
 Surface 1 Layout<br>
-First steps in HTML/CSS-coding.<br>
-First hard adaptive layout<br>
+First HARD ADAPTIVE layout<br>
 
 https://github.com/Y4Rick/surface_1 - Code style!
 
