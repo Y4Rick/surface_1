@@ -1,6 +1,6 @@
 # Surface_1
 Surface 1 Layout<br>
-First HARD ADAPTIVE layout<br>
+First ADAPTIVE layout<br>
 
 https://github.com/Y4Rick/surface_1 - Code style!
 
